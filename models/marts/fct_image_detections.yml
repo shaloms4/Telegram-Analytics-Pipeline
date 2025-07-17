@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: fct_image_detections
+    description: "Object detection results on Telegram images"
+    columns:
+      - name: detection_id
+        tests:
+          - unique
+          - not_null
+      - name: message_id
+        tests:
+          - not_null
+      - name: detected_class
+        tests:
+          - not_null

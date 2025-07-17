@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: fct_messages
+    description: "Fact table with all messages and basic metrics"
+    columns:
+      - name: message_id
+        description: "Primary key for messages"
+        tests:
+          - unique
+          - not_null
+
+      - name: message_length
+        description: "Length of the message text"
+        tests:
+          - not_null
